@@ -1,4 +1,16 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+    images: {
+        remotePatterns: [
+            {
+                protocol: "https",
+                hostname: "oaidalleapiprodscus.blob.core.windows.net",
+            },
+        ],
+    },
+    experimental: {
+        serverActions: true,
+    },
+};
 
 module.exports = nextConfig

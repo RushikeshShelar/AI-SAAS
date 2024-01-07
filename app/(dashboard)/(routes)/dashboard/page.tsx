@@ -1,13 +1,13 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { 
-    ArrowRight, 
-    Code, 
-    Image, 
-    MessageSquare, 
-    Music, 
-    Video 
+import {
+    ArrowRight,
+    Code,
+    Image,
+    MessageSquare,
+    Music,
+    Video
 } from "lucide-react";
 
 import { Card } from "@/components/ui/card";
@@ -55,14 +55,14 @@ const DashboardPage = () => {
 
     const router = useRouter();
 
-    return (    
+    return (
         <div>
             <div className="mb-8 space-y-4">
                 <h2 className="text-2xl md:text-4l font-bold text-center">
                     Explore the power of AI
                 </h2>
                 <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
-                    Chat with the smartest AI - Experience the power of AI
+                    Unlock Tomorrow's Potential Today with AI Exploration
                 </p>
             </div>
             <div className="px-4 md:px-20 lg:px-32 space-y-4">
@@ -73,8 +73,8 @@ const DashboardPage = () => {
                         className="p-4 border-black/5 flex items-center justify-between hover:shadow-md transition cursor-pointer"
                     >
                         <div className="flex items-center gap-x-4">
-                            <div className={cn(`p-2 w-fit rounded-md`,tool.bgColor)}>
-                                <tool.icon className={cn(`h-8 w-8`,tool.color)} />
+                            <div className={cn(`p-2 w-fit rounded-md`, tool.bgColor)}>
+                                <tool.icon className={cn(`h-8 w-8`, tool.color)} />
                             </div>
                             <div className="font-semibold">
                                 {tool.label}

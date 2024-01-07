@@ -7,7 +7,6 @@ import { useRouter } from "next/navigation";
 import { Music } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
 
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";

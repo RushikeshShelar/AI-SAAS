@@ -8,6 +8,7 @@ import { MessageSquare } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ChatCompletionMessageParam } from "openai/resources/index.mjs";
+import toast from "react-hot-toast";
 
 import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/heading";
@@ -57,12 +58,13 @@ const ConversationPage = () => {
             });
 
             setMessages((current) => [...current, userMessage, response.data ])
-
             form.reset();
 
         } catch (error: any) {
             if(error?.response?.status === 403){
               proModal.onOpen();
+            } else{
+              toast.error("Something went wrong.");
             }
         } finally {
             router.refresh();

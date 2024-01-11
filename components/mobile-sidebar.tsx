@@ -13,10 +13,12 @@ import { useEffect, useState } from "react";
 
 interface MobileSidebarProps {
     apiLimitCount: number;
+    isPro: boolean;
 }
 
 const MobileSidebar = ({
-    apiLimitCount
+    apiLimitCount,
+    isPro = false
 }: MobileSidebarProps) => {
 
     const [isMounted, setIsMounted] = useState(false);
@@ -38,7 +40,7 @@ const MobileSidebar = ({
                 </Button>
             </SheetTrigger>
             <SheetContent side='left' className="p-0">
-                <Sidebar apiLimitCount={apiLimitCount} setIsOpen={setIsOpen} />
+                <Sidebar isPro={isPro} apiLimitCount={apiLimitCount} setIsOpen={setIsOpen} />
             </SheetContent>
         </Sheet>
     );
